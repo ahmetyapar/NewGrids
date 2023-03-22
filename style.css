@@ -59,18 +59,30 @@ h1, h2, h3 ,h4 ,h5, h6 {
 }
 
 .btn-light{
-    background-color: var(--light-color);
+    background-color: var(--light-color) !important;
 }
 .btn-primary{
     background-color: var(--primary-color);
 }
 .btn-secondary{
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
+}
+.card {
+    padding: 15px;
+    background-color: #f3f3f3;
+    margin: 3px;
 }
 
-.bg-dark {
+.article-containers .bg-dark {
     background-color: var(--dark-color);
     color: #fff;
+}
+.article-containers .bg-dark a {
+    color: #f3f3f3;
+}
+
+.article-containers .bg-primary a {
+    color: #f3f3f3;
 }
 
 .bg-primary {
@@ -90,11 +102,7 @@ h1, h2, h3 ,h4 ,h5, h6 {
 img {
     width: 100%;
 }
-.card {
-    padding: 15px;
-    background-color: #fff;
-    margin: 3px;
-}
+
 .category {
     display: inline-block;
     font-size: 16px;
@@ -208,8 +216,10 @@ nav {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1;
+    margin-bottom: 1rem;
     
 }
+
 
 .middle h2 {
     margin-top: 10px;
@@ -230,6 +240,199 @@ nav {
     grid-column: 2/span 2;
     
 }
+
+footer {
+    background: var(--dark-color);
+    padding: 20px;
+}
+footer img{
+    width: 150px;
+}
+.container-footer {
+    max-width: var(--max-width);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+    color: #f3f3f3;
+    
+}
+
+.footer-card a {
+    color: #f3f3f3;
+    
+}
+
+.footer-card h1 {
+    font-size: 25px;
+}
+.footer-card p {
+    margin-bottom: 10px;
+}
+li {
+    list-style: none;
+}
+
+.footer-card li {
+    border-bottom: #444 dotted;
+    width: 80%;
+    padding: 3px;
+}
+.footer-card li a{
+    transition: 0.3s;
+}
+.footer-card li a:hover {
+    color: var(--primary-color) !important;
+}
+
+.footer-card input {
+    width: 90%;
+    padding: 7px 0;
+    margin-bottom: 5px;
+}
+
+.btn-2 {
+    border: none;
+    color: #f3f3f3;
+    cursor: pointer;
+}
+
+/* -----ABOUT-------*/
+.about-container {
+    max-width: var(--max-width);
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-gap: 1.5rem;
+}
+
+.content {
+    background: #fff;
+    padding: 15px;
+    grid-row: 1/span 3;
+}
+.content p {
+    margin-bottom: 10px;
+}
+.content h1 {
+    font-size: 3rem;
+}
+.side-content {
+    background-color: #c72727;
+    padding: 15px;
+    color: #f3f3f3;
+}
+.side-content p {
+    margin-bottom: 14px;
+}
+.side-content a {
+   background-color: #333; 
+   color: #f3f3f3;
+   padding: 10px;
+   display: inline-block;
+   text-align: center;
+   width: 90%;
+   
+}
+
+/* ----ARTICLE------*/
+.bgclr {
+    color: black;
+}
+.bgwht {
+    background-color: white;
+}
+
+
+.categorybar li {
+    font-weight: 600;
+    background-color: #f3f3f3;
+    margin-bottom: 0.3rem;
+    width: 10rem;
+    cursor: pointer;
+    transition: 0.3s;
+    
+
+}
+
+.categorybar li:hover {
+    background-color: #a66bbe;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav{
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        height: 6rem;
+    }
+    .nav .socials{
+        display: none;
+    
+    }
+    .nav .buttons{
+        justify-self: end;
+    }
+    .showcase-content{
+        z-index: 1;
+        position: relative;
+         max-width: var(--max-width);
+         margin-top: 1rem;
+         margin-left: 0.3rem;
+         width: 60%;
+         margin-bottom: 30px;
+
+         
+     }
+     .container {
+        max-width: 100%;
+        margin: 0;
+    }
+    .middle {
+        width: 100vw;
+        height: 100vh;
+        max-width:100%;
+        height: 100%;
+    }
+
+     .article-containers {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        
+    }
+    .article-containers > *:first-child{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    .article-containers > *:last-child{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    footer {
+        margin-top: 20px;
+    }
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+
+    .about-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+
 
 
 
